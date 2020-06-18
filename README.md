@@ -2,7 +2,11 @@
 
 ## Overview
 
+<<<<<<< HEAD
 Today's Class will train a machine learning model on data provided by [Home Credit](http://www.homecredit.net/) to determine if a borrower is likely to default on a loan. The exploratory data analysis and training will be conducted on a Jupyter Notebook on [Amazon SageMaker](https://aws.amazon.com/sagemaker/). The module files can be found at [this](https://github.com/thegrapesofwrath/finTechSageMaker) github repository.
+=======
+Today's Class will train a machine learning model on data provided by [Home Credit](http://www.homecredit.net/) to determine if a borrower is likely to default on a loan. The exploratory data analysis and training will be conducted on a Jupyter Notebook on [Amazon SageMaker](https://aws.amazon.com/sagemaker/).
+>>>>>>> 4913dc90b1f6c185c57b2f76115b0e3d0f2107c0
 
 ## Learning Objectives
 
@@ -20,11 +24,14 @@ At the end of the session, learners will be able to:
 
 * 
 
+<<<<<<< HEAD
 #### Module Dependencies
 * AWS account
 * github account
 * 
 
+=======
+>>>>>>> 4913dc90b1f6c185c57b2f76115b0e3d0f2107c0
 - - -
 
 ### 0. Class Do: Interview Question Warm-Up (5 mins before class, first 2 mins of class) 
