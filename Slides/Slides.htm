@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Class University" />
+  <meta name="date" content="2020-01-01" />
+  <title>Predicting Credit Defaults with Amazon SageMaker</title>
+  <style type="text/css">
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Predicting Credit Defaults with Amazon SageMaker</h1>
+  <p class="author">
+Class University
+  </p>
+  <p class="date">2020</p>
+</div>
+<div id="question-of-the-day" class="slide section level1">
+<h1>Question of the Day</h1>
+<ul class="incremental">
+<li>What are some advantages and disadvantages for using a cloud service to train machine learning models?</li>
+</ul>
+</div>
+<div id="exploratory-data-analysis" class="slide section level1">
+<h1>Exploratory Data Analysis</h1>
+<h4 id="ideas-to-try">Ideas to try:</h4>
+<ul class="incremental">
+<li>Identify categorical variables and encode them</li>
+<li>Look for missing data values</li>
+<li>Decide whether to estimate missing values or drop the column altogether</li>
+<li>Look at correlation of attribute columns with the target column</li>
+</ul>
+</div>
+<div id="categorical-variable-encoding" class="slide section level1">
+<h1>Categorical Variable Encoding</h1>
+<p>To convert categorical variables to numeric ones an encoding method is used.</p>
+<p>Two popular encoding methods are:</p>
+<ul class="incremental">
+<li>Label Encoding</li>
+<li>One-hot Encoding</li>
+</ul>
+</div>
+<div id="label-encoding" class="slide section level1">
+<h1>Label Encoding</h1>
+<p><img src="../Images/labelEncoding.png" /></p>
+</div>
+<div id="one-hot-encoding" class="slide section level1">
+<h1>One-hot Encoding</h1>
+<p><img src="../Images/oneHotEncoding.png" /></p>
+</div>
+<div id="pearsons-correlation-coefficient" class="slide section level1">
+<h1>Pearson’s correlation coefficient</h1>
+<p><img src="../Images/pearson-2-small.png" /></p>
+</div>
+<div id="imputation" class="slide section level1">
+<h1>Imputation</h1>
+<ul class="incremental">
+<li>Missing values can be replaced for an attribute that is missing data.</li>
+<li>Has a particular value just been deleted?</li>
+<li>The mean can be used for a substitution value</li>
+<li>A value from a regression could be used</li>
+<li>There are many imputation techniques</li>
+</ul>
+</div>
+<div id="random-forest" class="slide section level1">
+<h1>Random Forest</h1>
+<p><img src="../Images/randomForest.png" /></p>
+</div>
+<div class="slide section level1">
+
+</div>
+</body>
+</html>
