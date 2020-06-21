@@ -1,4 +1,4 @@
-# Module [N]: Class Lesson Plan
+# Module [N]: Lesson Plan: Title
  
 ## Overview
 
