@@ -265,7 +265,7 @@ pre[data-line] .line-highlight[data-end]:after {
 
 <h2 class="mume-header" id="overview">Overview</h2>
 
-<p>Today&apos;s Class will train a Random Forest on data provided by <a href="http://www.homecredit.net/" title="Home Credit">Home Credit</a> to determine if a borrower is likely to default on a loan. The exploratory data analysis and model training will be conducted on a Jupyter Notebook on <a href="https://aws.amazon.com/sagemaker/" title="Amazon SageMaker provides a cloud service for machine learning.">Amazon SageMaker</a>. The module files can be found at <a href="https://github.com/thegrapesofwrath/finTechSageMaker" title="Module Github Repository">this</a> github repository.</p>
+<p>Today&apos;s Class will train a Random Forest on data provided by <a href="http://www.homecredit.net/" title="Home Credit">Home Credit</a> to determine if a borrower is likely to default on a loan. The exploratory data analysis and model training will be conducted in a Jupyter Notebook on <a href="https://aws.amazon.com/sagemaker/" title="Amazon SageMaker provides a cloud service for machine learning.">Amazon SageMaker</a>. The module files can be found at <a href="https://github.com/thegrapesofwrath/finTechSageMaker" title="Module Github Repository">this</a> github repository.</p>
 <h3 class="mume-header" id="learning-objectives">Learning Objectives</h3>
 
 <p>At the end of the session, learners will be able to:</p>
@@ -288,8 +288,8 @@ pre[data-line] .line-highlight[data-end]:after {
 </ul>
 <h3 class="mume-header" id="instructor-notes">Instructor Notes</h3>
 
-<p>Students will be expected to clone the data from the class repository and follow along to upload the files into their own <a href="https://aws.amazon.com/s3/" title="Amazon file storage service">S3</a> bucket. Once a notebook has been created proceed to introduce the topics on exploratory data analysis using the <a href="https://docs.google.com/presentation/d/1rT89zpfIj99OE-EiuRBF1ius1b4hkzULGQjJnuEGJQs/edit?usp=sharing" title="This week&apos;s slideshow.">slides</a>.</p>
-<p>Demonstrate an example exploratory analysis using the <a href="Activities/mtcars/mtcars.csv" title="mtcars Dataset">mtcars</a> dataset. Split students into breakout rooms where they will try an exploratory analysis on the <a href="Activities/creditDefaultData/creditDefaultTrain.csv" title="The credit default training data.">creditDefaultTrain</a> dataset. Upon returning from the breakout rooms have students share their findings. Proceed to finish the class by training the random forest model on creditDefaultTrain and then answer any questions.</p>
+<p>Students will be expected to clone the data from the class repository and follow along to upload the files into their own <a href="https://aws.amazon.com/s3/" title="Amazon file storage service">S3</a> bucket. Once a notebook has been created proceed to introduce the topics on exploratory data analysis using the <a href="Slides/Slides.pptx" title="This week&apos;s slideshow.">slides</a>.</p>
+<p>Demonstrate an example exploratory analysis using the <a href="Activities/mtcars/mtcars.csv" title="mtcars Dataset">mtcars</a> dataset. Split students into breakout rooms where they will try an exploratory analysis on the <a href="Activities/creditDefaultData/creditDefaultTrain.csv" title="The credit default training data.">creditDefaultTrain</a> dataset. Upon returning from the breakout rooms have students share their findings. Proceed to finish the class by training the random forest model on creditDefaultTrain and then answer any questions. After class, students can test their model on the <a href="Activities/creditDefaultData/creditDefaultTest.csv">creditDefaultTest</a> dataset and think of ways they can improve their accuracy.</p>
 <h5 class="mume-header" id="module-student-dependencies">Module Student Dependencies</h5>
 
 <ul>
@@ -300,17 +300,17 @@ pre[data-line] .line-highlight[data-end]:after {
 <h5 class="mume-header" id="potential-student-environment-issues">Potential Student Environment Issues</h5>
 
 <ul>
-<li>Students maybe confused in their scripts between using the object URL and using an s3:// url with the bucket name. If they try to use the object URL the file will not be accessible by SageMaker until the security settings are changed to make it public. Best practice would be to use the s3:// url and bucket name as the file does not have to be made public.</li>
+<li>Students maybe confused in their scripts between using the object URL and using an <code>s3://</code> url with the bucket name. If they try to use the object URL the file will not be accessible by SageMaker until the security settings are changed to make it public. Best practice would be to use the <code>s3://</code> url and bucket name as the file does not have to be made public.</li>
 </ul>
 <blockquote>
 <p><strong>Tip</strong>: If time permits and a student is having environment difficulties you may ask them to share their screen while you help them resolve it. Other students will benefit who are having the same issue.</p>
 </blockquote>
 <p><img src="Images/objectURL.png" alt></p>
-<p>s3:// urls are thus created:</p>
+<p><code>s3://</code> urls are thus created:</p>
 <pre data-role="codeBlock" data-info="python" class="language-python">s3URL <span class="token operator">=</span> <span class="token string">&quot;s3://fintech-example1/creditDefaultTest.csv&quot;</span> <span class="token comment">#s3://bucket-name/fileName</span>
 </pre><h5 class="mume-header" id="git-lfs">Git LFS</h5>
 
-<p>If a repository needs to be configured for LFS after it has been created it maybe done so in the following way:</p>
+<p>If a repository needs to be configured for large file storage after it has been created it maybe done so in the following way:</p>
 <pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token function">git</span> lfs <span class="token function">install</span>
 <span class="token function">git</span> lfs track <span class="token string">&quot;*.csv&quot;</span> <span class="token comment">#type of file to track</span>
 <span class="token function">git</span> add .gitattributes
@@ -322,13 +322,14 @@ pre[data-line] .line-highlight[data-end]:after {
 
 <ul>
 <li><a href="AdditionalReading/ISLRSeventhPrinting.pdf" title="This is a good reference and place to review some concepts for advanced students.">An Introduction to Statistical Learning</a> - Examples are in R and the theory is explained concisely.</li>
+<li><a href="AdditionalReading/pearsons.pdf">Pearson&apos;s Correlation Coefficient</a></li>
 </ul>
 <hr>
 <h3 class="mume-header" id="0-class-do-interview-question-warm-up">0. Class Do: Interview Question Warm-Up</h3>
 
 <h5 class="mume-header" id="5-mins-before-class-first-2-mins-of-class">(5 mins before class - first 2 mins of class)</h5>
 
-<p>Open <a href="https://docs.google.com/presentation/d/1rT89zpfIj99OE-EiuRBF1ius1b4hkzULGQjJnuEGJQs/edit?usp=sharing" title="This week&apos;s slideshow.">the slideshow</a> for today&apos;s class and begin the weekly presentation with the first slide.</p>
+<p>Open the <a href="Slides/Slides.pptx" title="This week&apos;s slideshow.">slides</a> for today&apos;s class and begin the weekly presentation with the first slide.</p>
 <blockquote>
 <p><strong>This week&apos;s question:</strong> What are some advantages and disadvantages for using a cloud service to train machine learning models?</p>
 </blockquote>
@@ -364,12 +365,186 @@ pre[data-line] .line-highlight[data-end]:after {
 <li><a href="https://towardsdatascience.com/understanding-random-forest-58381e0602d2" title="Random Forest Article">Random Forest</a>  : <strong>C</strong></li>
 </ul>
 <hr>
-<h2 class="mume-header" id="a-s3-data-upload-and-sagemaker-notebook-creation-everyone-15-minutes">A. S3 data upload and SageMaker notebook creation - Everyone (15 minutes)</h2>
+<h2 class="mume-header" id="a-s3-data-upload-and-sagemaker-notebook-creation">A. S3 data upload and SageMaker notebook creation</h2>
 
+<h3 class="mume-header" id="everyone-do-connect-s3-and-sagemaker">Everyone Do: Connect S3 and SageMaker</h3>
+
+<h5 class="mume-header" id="15-minutes">(15 minutes)</h5>
+
+<p>Everyone one must have an account created. Students will need to create two buckets, one for the <code>mtcars</code> dataset and one for the <code>creditDefault</code> dataset. They will then create one sageMaker notebook instance for their notebooks. Amazon has a limit of two notebook sessions per free account. Everyone will verify that it is set up correctly by pulling the <code>mtcars</code> dataset from the S3 bucket into their notebook.</p>
+<blockquote>
+<p><strong>Tip</strong>: The <code>creditDefault</code> dataset is larger than the <code>mtcars</code> dataset. Students may have a slower internet speed so uploading at the beginning of class may save some time.</p>
+</blockquote>
+<h3 class="mume-header" id="create-a-s3-bucket">Create a S3 bucket</h3>
+
+<p>Navigate to the <a href="https://aws.amazon.com/console/">aws console</a> and click on the link for S3.<br>
+<img src="Images/openS3.gif" alt></p>
+<p>Click on the create bucket button and give the bucket an Amazon approved name.</p>
+<blockquote>
+<p><strong>Note</strong>: The bucket name may only contain lowercase letters and hyphens.</p>
+</blockquote>
+<p><img src="Images/createBucket.gif" alt></p>
+<p>Choose the dataset and upload it to its appropriate bucket.<br>
+<img src="Images/uploadFileS3.gif" alt></p>
+<h3 class="mume-header" id="create-a-sagemaker-notebook-instance">Create a SageMaker notebook instance</h3>
+
+<p>Return to the aws console page and select the SageMaker link.<br>
+<img src="Images/navigateSageMaker.gif" alt><br>
+Once on the SageMaker landing page select the notebook instances link.<br>
+<img src="Images/openNotebookInstances.gif" alt><br>
+Create a new notebook instance.<br>
+<img src="Images/createNotebook1.gif" alt><br>
+Give the notebook instance a name and create it with the default options.<br>
+<img src="Images/createNotebook2.gif" alt></p>
+<p>Wait for the notebook status to change from Pending to InService and open the new notebook instance.<br>
+<img src="Images/openNoteBook.gif" alt></p>
+<p>Create a new Jupyter notebook and choose <code>conda_python3</code> for the environment.</p>
+<p><img src="Images/createJupyterNotebook.gif" alt></p>
+<p>Rename the newly created notebook to mtcarsAnalysis.</p>
+<p>Verify that you can import the csv file in the S3 bucket into the Jupyter notebook using the following code:</p>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token comment"># import libraries</span>
+<span class="token keyword">from</span> sagemaker <span class="token keyword">import</span> get_execution_role                            
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd     
+
+role <span class="token operator">=</span> get_execution_role<span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token comment">#Gets the current SageMaker instance execution role</span>
+awsBucketName <span class="token operator">=</span> <span class="token string">&apos;&apos;</span>              <span class="token comment">#populate with the bucket name you created</span>
+fileName <span class="token operator">=</span> <span class="token string">&apos;mtcars.csv&apos;</span>
+bucketPath <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f&quot;s3://</span><span class="token interpolation"><span class="token punctuation">{</span>awsBucketName<span class="token punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token punctuation">{</span>fileName<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span>
+
+pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span>bucketPath<span class="token punctuation">)</span>
+</pre><blockquote>
+<p><strong>Technical Tip</strong>: <code>get_execution_role</code> gets the current user context of the amazon account associated with the AWS service. Unless created otherwise, the amazon account user login is the root user for aws services. The user context maybe used across multiple aws services.</p>
+</blockquote>
+<p>You should see the <code>mtcars</code> dataset populated.</p>
+<blockquote>
+<p><strong>Transition Tip</strong>: Before moving on to the slides ask if any students are not able to access the <code>mtcars</code> data in their notebook. If students are having issues and time permits have them share their screen. Once everyone is able to access the dataset through their notebook open the <a href="Slides/Slides.pptx" title="This week&apos;s slideshow.">slides</a> for exploratory data analysis.</p>
+</blockquote>
+<hr>
 <h2 class="mume-header" id="b-exploratory-data-analysis">B. Exploratory Data Analysis</h2>
 
+<h3 class="mume-header" id="instructor-do-slideslidesslidespptx-this-weeks-slideshow-presentation">Instructor Do: <a href="Slides/Slides.pptx" title="This week&apos;s slideshow.">Slide</a> presentation</h3>
+
+<h5 class="mume-header" id="15-mins">(15 mins)</h5>
+
+<p>See slide speaker notes.</p>
+<blockquote>
+<p><strong>Transition Tip</strong>: Take a moment to answer any questions on the slides. While you are doing the mtcars analysis a TA may set up the breakout rooms for the creditDefault exercise. Send the student breakout room files to the TA so that they can quickly slack it out when they open the room.</p>
+</blockquote>
+<h3 class="mume-header" id="instructor-do-mtcars-analysis">Instructor Do: mtcars Analysis:</h3>
+
+<h5 class="mume-header" id="20-mins">(20 mins)</h5>
+
+<p>Students will code along in their jupyter notebook with you. After you demonstrate an exploratory analysis it will be the students turn. They will try an analysis on the creditDefault dataset in breakout rooms.</p>
+<ul>
+<li><a href="Activities/mtcars/mtcars.py">mtcars.py</a></li>
+<li><a href="Activities/mtcars/mtcarsAnalysis.ipynb">mtcarsAnalysis.ipynb</a></li>
+</ul>
+<p>The libraries needed for the mtcarsAnalysis script are:</p>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword">from</span> sagemaker <span class="token keyword">import</span> get_execution_role                            
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>preprocessing <span class="token keyword">import</span> LabelEncoder
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>ensemble <span class="token keyword">import</span> RandomForestClassifier
+</pre><blockquote>
+<p><strong>Tip</strong>: Add the module imports while constructing the script as it will bring attention to each one and give the instructor an opportunity to elaborate on the module features.</p>
+</blockquote>
+<h4 class="mume-header" id="identify-the-categorical-variables-using-dtypes">Identify the categorical variables using dtypes</h4>
+
+<p>Pandas <code>dtypes</code> has a method <code>value_counts()</code> associated with it that will return a count of the column data types.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python">role <span class="token operator">=</span> get_execution_role<span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token comment">#Gets the current SageMaker instance execution role</span>
+awsBucketName <span class="token operator">=</span> <span class="token string">&apos;&apos;</span>              <span class="token comment">#populate with the bucket name you created</span>
+fileName <span class="token operator">=</span> <span class="token string">&apos;mtcars.csv&apos;</span>
+bucketPath <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f&quot;s3://</span><span class="token interpolation"><span class="token punctuation">{</span>awsBucketName<span class="token punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token punctuation">{</span>fileName<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span>
+
+mtcars <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span>bucketPath<span class="token punctuation">)</span>
+</pre><p><code>mtcars</code> has three data types of which we are interested in the object type. These are the columns that will contain the categorical variables that will need to be encoded before a model can be trained.</p>
+<h4 class="mume-header" id="determine-unique-values">Determine unique values</h4>
+
+<p>Using the <code>select_dtypes</code> we can select the columns which contain data of the object type. The <code>apply</code> method is used to get a count of the number of unique values.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python">mtcars<span class="token punctuation">.</span>select_dtypes<span class="token punctuation">(</span><span class="token string">&apos;object&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">apply</span><span class="token punctuation">(</span>pd<span class="token punctuation">.</span>Series<span class="token punctuation">.</span>nunique<span class="token punctuation">,</span> axis <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment"># Get number of unique categorical values for each object column</span>
+</pre><p>The <code>carName</code> column cannot be used. Why?</p>
+<blockquote>
+<p><strong>Class Insight</strong>: Since each value is unique there is a uniform distribution of the data. Therefore all values have an equal chance of occurring.</p>
+</blockquote>
+<p><code>carName</code> has no statistical significance so it will be dropped.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python">mtcars <span class="token operator">=</span> mtcars<span class="token punctuation">.</span>drop<span class="token punctuation">(</span>columns <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;carName&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</pre><h4 class="mume-header" id="check-columns-for-missing-data">Check columns for missing data</h4>
+
+<p>The <code>isnull</code> method returns all null values of which the sum can be found.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python">mtcars<span class="token punctuation">.</span>isnull<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">#No missing values</span>
+</pre><p>Luckily, <code>mtcars</code> is not missing any data. There will be missing values in the <code>creditDefault</code> dataset that students will find in the breakout room.</p>
+<blockquote>
+<p><strong>Foreshadow</strong>: If <code>mtcars</code> was missing data what would need to be done? Imputation is the process of estimating missing values. What are some ways that could be used to estimate these values?</p>
+</blockquote>
+<h4 class="mume-header" id="either-label-or-one-hot-encode">Either label or one-hot encode</h4>
+
+<p>Label encoding works best for categorical variables with 2 or less distinct values.<br>
+<code>transmissionType</code> has only two distinct values. It can be label encoded.</p>
+<blockquote>
+<p><strong>Tip</strong>: Use <code>transmissionType</code> for a hypothetical target column in a model you would train.</p>
+</blockquote>
+<p>Add the <code>from sklearn.preprocessing import LabelEncoder</code> to your package imports. The <code>LabelEncoder</code> class from <code>sklearn</code> is what will be used to encode the values.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token comment">#Encode transmissionType</span>
+le <span class="token operator">=</span> LabelEncoder<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+le<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>mtcars<span class="token punctuation">[</span><span class="token string">&quot;transmissionType&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+mtcars<span class="token punctuation">[</span><span class="token string">&quot;transmissionType&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> le<span class="token punctuation">.</span>transform<span class="token punctuation">(</span>mtcars<span class="token punctuation">[</span><span class="token string">&quot;transmissionType&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</pre><p><code>engineShapeVSF-(vshaped,straight,flat)</code> has three distinct values so one-hot encoding will be used for it. One hot encoding works by creating a vector that is the same length as the number of unique categorical values.</p>
+<blockquote>
+<p><strong>Class Insight</strong>: Data sets with many categorical attributes will grow large very quickly with one-hot encoding. This is why cloud services like Amazon SageMaker make alot of business sense compared to the hardware startup costs.</p>
+</blockquote>
+<p>The <code>pandas</code> <code>get_dummies</code> method can be used for one-hot encoding. Compare the <code>shape</code> attribute of <code>mtcars</code> before and after one-hot encoding.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python">mtcars<span class="token punctuation">.</span>shape
+
+mtcars <span class="token operator">=</span> pd<span class="token punctuation">.</span>get_dummies<span class="token punctuation">(</span>mtcars<span class="token punctuation">)</span>
+
+mtcars<span class="token punctuation">.</span>shape
+</pre><h4 class="mume-header" id="check-correlations-with-a-hypthetical-target-column">Check correlations with a hypthetical target column</h4>
+
+<p>Pearson&apos;s coefficient looks at the likely hood that two variables are moving together, apart or their movements are not related. Considering <code>transmissionType</code> as the hypothetical target, the <code>corr</code> method can be used to get Pearson&apos; coefficient.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python">mtcars<span class="token punctuation">.</span>corr<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&apos;transmissionType&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>sort_values<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">#check correlation with respect to our target column. Lets predict transmission type.</span>
+</pre><p><code>numberOfGears</code> and <code>weight</code> have values closest to -1 and 1 respectively. They would make good candidate attributes for a model.</p>
+<h4 class="mume-header" id="plot-data-and-show-distributions-of-some-columns">Plot data and show distributions of some columns</h4>
+
+<p>Plot the <code>weight</code> and <code>numberOfGears</code> columns.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python">mtcars<span class="token punctuation">[</span><span class="token string">&quot;weight&quot;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>astype<span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">)</span><span class="token punctuation">.</span>plot<span class="token punctuation">.</span>hist<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><pre data-role="codeBlock" data-info="python" class="language-python">mtcars<span class="token punctuation">[</span><span class="token string">&quot;numberOfGears&quot;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>astype<span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">)</span><span class="token punctuation">.</span>plot<span class="token punctuation">.</span>hist<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><p><strong>Class discussion</strong>: What do the shapes of the histograms tell us about the distributions? <code>weight</code> looks fairly standard normal while <code>numberOfGears</code> is skewed.</p>
+<blockquote>
+<p><strong>Transition Tip</strong>: Use the discussion to get the class motivated before going into the breakout room. Quickly introduce the <code>creditDefault</code> dataset and instruct them to perform the same steps for an exploratory data analysis. Ask the class to be prepared to discuss differences in the categorical variables between <code>mtcars</code> and <code>creditDefault</code> when they return. The TA should have the breakout rooms prepared. Message them in slack to open the rooms, slack out files and quickly segway from the discussion into the breakout rooms.</p>
+</blockquote>
+<hr>
+<h3 class="mume-header" id="class-do-breakout-room-creditdefault-eda">Class Do: Breakout Room - <code>creditDefault</code> EDA</h3>
+
+<h5 class="mume-header" id="20-mins-1">(20 mins)</h5>
+
+<p>At the beginning of class send the student instruction file and student starter script to the TA. These will be the files that are sent to students in the breakout rooms. The students will perform their analysis on the <code>creditDefaultTrain</code> dataset. They should upload the dataset to their S3 bucket when they upload <code>mtcars</code>. A <a href="Activities/creditDefaultData/HomeCredit_columns_description.csv">description</a> of the columns is included. Students may try and test their random forest classifier on the <code>creditDefaultTest</code> for a takehome assignment.</p>
+<p><strong>Student Instruction File</strong>:</p>
+<ul>
+<li><a href="Activities/creditDefaultData/creditDefault.txt">creditDefault.txt</a></li>
+</ul>
+<p><strong>Student Starter Script</strong>:</p>
+<ul>
+<li><a href="Activities/creditDefaultData/creditDefaultUnsolved.py">creditDefaultUnsolved.py</a></li>
+</ul>
+<p><strong>Instructor Script</strong>:</p>
+<ul>
+<li><a href="Activities/creditDefaultData/creditDefaultSolved.py">creditDefaultSolved.py</a></li>
+</ul>
 <h2 class="mume-header" id="c-imputation-and-model-training">C. Imputation and Model Training</h2>
 
+<p>Bring students back from the breakout rooms and have them discuss what they found. There is missing values and <code>creditDefault</code> gets large quickly once it is one-hot encoded. It would take hardware resources that most don&apos;t have to train a random forest on that dataset but with Amazon SageMaker they are able to.</p>
+<h3 class="mume-header" id="instructor-do-handle-missing-values-and-train-model">Instructor Do: - Handle Missing Values and Train Model</h3>
+
+<h5 class="mume-header" id="15-mins-1">(15 mins)</h5>
+
+<p>Demonstrate replacing the missing values using a pandas module.</p>
+<p>Train a Random Forest Classifier using an sklearn module</p>
+<h3 class="mume-header" id="instructor-do-questions-and-closing-thanks">Instructor Do: Questions and Closing Thanks</h3>
+
+<h5 class="mume-header" id="5-mins">(5 mins)</h5>
+
+<p>Answer any questions students may have and then thank them for coming.</p>
 
       </div>
       

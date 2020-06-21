@@ -1,0 +1,14 @@
+Now its your turn! With the help of your partners try to apply the same data analysis 
+technique to the creditDefault data set. The target column for a model is TARGET.
+
+Try to answer the following questions:
+
+How many columns have categorical variables?
+
+Which columns have categorical variables?
+
+How many unique values are their for each categorical column?
+
+Do any columns have missing data? If so try to fill in the missing values.
+
+Which columns most strongly correlate with the TARGET column?
