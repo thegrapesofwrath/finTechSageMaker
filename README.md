@@ -296,7 +296,7 @@ mtcars["numberOfGears"].astype(int).plot.hist();
 ---
 
 ### Class Do: Breakout Room - `creditDefault` EDA
-##### (20 mins)
+##### (30 mins)
 
 At the beginning of class send the student instruction file and student starter script to the TA. These will be the files that are sent to students in the breakout rooms. The students will perform their analysis on the `creditDefaultTrain` dataset. They should upload the dataset to their S3 bucket when they upload `mtcars`. A [description](Activities/creditDefaultData/HomeCredit_columns_description.csv) of the columns is included. Students may try and test their random forest classifier on the `creditDefaultTest` for a takehome assignment.
 
@@ -314,7 +314,7 @@ At the beginning of class send the student instruction file and student starter 
 Bring students back from the breakout rooms and have them discuss what they found. There is missing values and `creditDefault` gets large quickly once it is one-hot encoded. It would take hardware resources that most don't have to train a random forest on that dataset but with Amazon SageMaker they are able to.
 
 ### Instructor Do: - Handle Missing Values and Train Model
-##### (15 mins)
+##### (25 mins)
 
 Demonstrate replacing the missing values using a pandas module.
 
