@@ -19,7 +19,7 @@ At the end of the session, learners will be able to:
 * Understand how to create a random forest model
 
 ### Instructor Notes
-Students will be expected to clone the data from the class repository and follow along to upload the files into their own [S3](https://aws.amazon.com/s3/ "Amazon file storage service") bucket. Once a notebook has been created proceed to introduce the topics on exploratory data analysis using the [slides](Slides/Slides.pptx "This week's slideshow."). 
+Students will be expected to clone the data from the class repository and follow along to upload the files into their own [S3](https://aws.amazon.com/s3/ "Amazon file storage service") bucket. Once a notebook has been created proceed to introduce the topics on exploratory data analysis using the [slides](Slides/Slides\.htm "This week's slideshow."). 
 
 Demonstrate an example exploratory analysis using the [mtcars](Activities/mtcars/mtcars.csv "mtcars Dataset") dataset. Split students into breakout rooms where they will try an exploratory analysis on the [creditDefaultTrain](Activities/creditDefaultData/creditDefaultTrain.csv "The credit default training data.") dataset. Upon returning from the breakout rooms have students share their findings. Proceed to finish the class by training the random forest model on creditDefaultTrain and then answer any questions. After class, students can test their model on the [creditDefaultTest](Activities/creditDefaultData/creditDefaultTest.csv) dataset and think of ways they can improve their accuracy.
 
@@ -62,7 +62,7 @@ git push origin master
 ### 0. Class Do: Interview Question Warm-Up
 ##### (5 mins before class - first 2 mins of class) 
 
-Open the [slides](Slides/Slides.pptx "This week's slideshow.") for today's class and begin the weekly presentation with the first slide. 
+Open the [slides](Slides/Slides\.htm "This week's slideshow.") for today's class and begin the weekly presentation with the first slide. 
 
 >**This week's question:** What are some advantages and disadvantages for using a cloud service to train machine learning models?
 
@@ -161,13 +161,13 @@ pd.read_csv(bucketPath)
 
 You should see the `mtcars` dataset populated. 
 
->**Transition Tip**: Before moving on to the slides ask if any students are not able to access the `mtcars` data in their notebook. If students are having issues and time permits have them share their screen. Once everyone is able to access the dataset through their notebook open the [slides](Slides/Slides.pptx "This week's slideshow.") for exploratory data analysis.
+>**Transition Tip**: Before moving on to the slides ask if any students are not able to access the `mtcars` data in their notebook. If students are having issues and time permits have them share their screen. Once everyone is able to access the dataset through their notebook open the [slides](Slides/Slides\.htm "This week's slideshow.") for exploratory data analysis.
 
 ---
 
 ## B. Exploratory Data Analysis
 
-### Instructor Do: [Slide](Slides/Slides.pptx "This week's slideshow.") presentation
+### Instructor Do: [Slide](Slides/Slides\.htm "This week's slideshow.") presentation
 ##### (15 mins)
 
 See slide speaker notes.
